@@ -116,9 +116,9 @@ Recomendamos seguir [estas instrucciones](https://babeljs.io/docs/editors/) para
 
 </details>
 
-### ¡Ayuda, estoy atorado! {#help-im-stuck}
+### ¡Ayuda, estoy atascado! {#help-im-stuck}
 
-Si te atoras, revisa los [recursos de soporte de la comunidad](/community/support.html). En particular, [el chat de Reactiflux](https://discord.gg/reactiflux) es una gran manera de obtener ayuda rápidamente. Si no recibes una respuesta, o sigues atorado, por favor crea un issue, y te ayudaremos.
+Si te atascas, revisa los [recursos de soporte de la comunidad](/community/support.html). En particular, [el chat de Reactiflux](https://discord.gg/reactiflux) es una gran manera de obtener ayuda rápidamente. Si no recibes una respuesta, o sigues atascado, por favor crea un ticket (issue), y te ayudaremos.
 
 ## Visión General {#overview}
 
@@ -149,11 +149,11 @@ class ShoppingList extends React.Component {
 // Uso de ejemplo: <ShoppingList name="Mark" />
 ```
 
-Vamos a ver las etiquetas divertidas que parecen XML pronto. Usamos componentes para decirle a React lo que queremos que se vea en la pantalla. Cuando nuestros datos cambian, React actualizará eficientemente y volverá a renderizar (re-render) nuestros componentes.
+Vamos a ver lo divertidas que parecen las etiquetas XML pronto. Usamos componentes para decirle a React lo que queremos que se vea en la pantalla. Cuando nuestros datos cambian, React actualizará eficientemente y volverá a renderizar (re-render) nuestros componentes.
 
-Aquí, ShoppingList es una **clase de componente de React**, ó **tipo de componente de React**.  Un componente acepta parámetros, llamados `props` (abreviatura de "propiedades"), y retorna una jerarquía de vistas a mostrar a través del método `render`.
+Aquí, ShoppingList es una **clase de componente de React**, ó **tipo de componente de React**.  Un componente acepta parámetros, llamados `props` (abreviatura de "propiedades"), y devuelve una jerarquía de vistas a mostrar a través del método `render`.
 
-El método `render` retorna una *descripción* de lo que quieres ver en la pantalla. React toma la descripción y muestra el resultado. En particular, `render` retorna un **elemento de React**, el cuál es una ligera descripción de lo que hay que renderizar. La mayoría de desarrolladores de React usan una sintaxis especial llamada "JSX" que facilita la escritura de estas estructuras. La sintaxis `<div />` es transformada en tiempo de construcción a `React.createElement('div')`. El ejemplo anterior es equivalente a:
+El método `render` devuelve una *descripción* de lo que quieres ver en la pantalla. React toma la descripción y muestra el resultado. En particular, `render` devuelve un **elemento de React**, el cuál es una ligera descripción de lo que hay que renderizar. La mayoría de desarrolladores de React usan una sintaxis especial llamada "JSX" que facilita la escritura de estas estructuras. La sintaxis `<div />` es transformada en tiempo de compilación a `React.createElement('div')`. El ejemplo anterior es equivalente a:
 
 ```javascript
 return React.createElement('div', {className: 'shopping-list'},
@@ -172,9 +172,9 @@ El componente anterior `ShoppingList` solo renderiza componentes pre-construidos
 
 ## Inspeccionando el código inicial {#inspecting-the-starter-code}
 
-Si vas a trabajar el tutorial **en tu navegador,** abre este código en un nuevo tab: **[Código inicial](https://codepen.io/gaearon/pen/oWWQNa?editors=0010)**. Si vas a trabajar el tutorial **localmente,** abre `src/index.js` en la carpeta de tu proyecto (ya has tocado este archivo durante la [configuración](#setup-option-2-local-development-environment)).
+Si vas a trabajar el tutorial **en tu navegador,** abre este código en una nueva pestaña: **[Código inicial](https://codepen.io/gaearon/pen/oWWQNa?editors=0010)**. Si vas a trabajar el tutorial **localmente,** abre `src/index.js` en la carpeta de tu proyecto (ya has tocado este archivo durante la [configuración](#setup-option-2-local-development-environment)).
 
-Este código inicial es la base de lo que estás construyendo. Nos han provisto los estilos de CSS así que solo necesitas enfocarte en aprender React y programar el juego tic-tac-toe.
+Este código inicial es la base de lo que estás construyendo. Os hemos dado los estilos de CSS así que solo necesitas enfocarte en aprender React y programar el juego tic-tac-toe.
 
 Inspeccionando el código, notarás que tenemos 3 componentes de React:
 
@@ -182,11 +182,11 @@ Inspeccionando el código, notarás que tenemos 3 componentes de React:
 * Board
 * Game
 
-El componente Square renderiza un simple `<button>` y el Board renderiza 9 cuadrados. El componente Game renderiza un table con valores de posición por defecto que modificaremos luego. Actualmente no hay componentes interactivos.
+El componente Square renderiza un simple `<button>` y el Board renderiza 9 cuadrados. El componente Game renderiza un tablero con valores de posición por defecto que modificaremos luego. Actualmente no hay componentes interactivos.
 
 ### Pasando datos a través de props {#passing-data-through-props}
 
-Solo para ensuciarnos las manos, vamos a pasar algo de datos de nuestro componente Board a nuestro componente Square.
+Para empezar, vamos a pasar algo de datos de nuestro componente Board a nuestro componente Square.
 
 Recomendamos firmemente escribir el código a mano mientras sigues el tutorial sin copiar y pegar. Esto te ayudará a desarrollar una memoria muscular y un entendimiento más sólido.
 
